@@ -30,23 +30,33 @@
             >;
         };
 
-        lower_layer {
+        navigation {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4       &kp F5    &kp F6       &kp F7     &kp F8    &kp F9       &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3       &kp N4    &kp N5       &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &kp RALT
-                                  &lt ADJ TAB  &trans    &trans       &trans     &trans    &lt ADJ DEL
+ &trans     &trans   &trans  &trans  &mkp MCLK  &trans       &mwh SCROLL_HOR(-25)  &mwh SCROLL_VERT(-25)  &mwh SCROLL_VERT(25) &mwh SCROLL_HOR(25)  &trans  &trans
+ &kp CAPS   &trans   &trans  &trans  &mkp LCLK  &mkp RCLK    &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT            &trans  &trans
+ &trans     &trans   &trans  &trans  &trans     &trans       &kp HOME              &kp PAGE_DOWN          &kp PAGE_UP          &kp END              &trans  &trans
+                             &trans  &trans     &trans       &trans                &trans                 &trans
             >;
         };
 
-        raise_layer {
+        symbols {
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp N7    &kp N8                &kp N9     &kp C_BRI_INC    &kp RET     
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp N4    &kp N5                &kp N6     &kp N0           &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp N1    &kp N2                &kp N3     &kp PAUSE_BREAK  &kp RALT
-                                             &trans     &trans     &lt ADJ RET     &lt ADJ ESC   &trans    &trans
+&trans    &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
+&kp F1    &kp F2    &kp F3   &kp F4    &kp F5     &kp F6      &kp MINUS   &kp EQUAL &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&kp F7    &kp F8    &kp F9   &kp F10   &kp F11    &kp F12     &kp UNDER   &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                             &trans    &trans     &kp DELETE  &trans      &trans    &trans
             >;
         };
+
+        numbers {
+            bindings = <
+ &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &trans     &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+ &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans           &tog 4    &kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans           &trans    &trans            &trans            &trans        &trans        &trans
+                                     &trans        &trans          &trans           &trans    &trans            &trans
+            >;
+        };
+
 
         adjust_layer {
             bindings = <
