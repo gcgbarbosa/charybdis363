@@ -148,169 +148,9 @@
 
     combos {
         compatible = "zmk,combos";
-
-        ParaLeft {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <4 5>;
-        };
-
-        ParaRight {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 6>;
-        };
-
-        BrakLeft {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <16 17>;
-        };
-
-        BrakRight {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <18 19>;
-        };
-
-        BraceLeft {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <28 29>;
-        };
-
-        BraceRight {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <30 31>;
-        };
-
-        CapsWord {
-            bindings = <&caps_word>;
-            key-positions = <17 18>;
-        };
-
-        GAME_MODE {
-            bindings = <&to 5>;
-            key-positions = <24 12 0>;
-        };
-
-        RightClickLeft {
-            bindings = <&mkp RCLK>;
-            key-positions = <14 15>;
-        };
-
-        RightClickRight {
-            bindings = <&mkp RCLK>;
-            key-positions = <20 21>;
-        };
-
-        LeftClickLeft {
-            bindings = <&mkp LCLK>;
-            key-positions = <16 15>;
-        };
-
-        LeftClickRight {
-            bindings = <&mkp LCLK>;
-            key-positions = <19 20>;
-        };
-
-        MiddleClickLeft {
-            bindings = <&mkp MCLK>;
-            key-positions = <13 14>;
-        };
-
-        MiddleClickRight {
-            bindings = <&mkp MCLK>;
-            key-positions = <21 22>;
-        };
-
-        DoubleQuote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <15 16>;
-        };
-
-        SingleQuote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <19 20>;
-        };
-
-        TildaSign {
-            bindings = <&kp TILDE>;
-            key-positions = <0 12>;
-        };
-
-        GraveSign {
-            bindings = <&kp GRAVE>;
-            key-positions = <12 24>;
-        };
-
-        MinusSign {
-            bindings = <&kp MINUS>;
-            key-positions = <3 4>;
-        };
-
-        PlusSign {
-            bindings = <&kp PLUS>;
-            key-positions = <2 3>;
-        };
-
-        UnderscoreSign {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <7 8>;
-        };
-
-        PipeSign {
-            bindings = <&kp PIPE>;
-            key-positions = <9 8>;
-        };
     };
 
     behaviors {
-        u_mt: u_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "u_mt";
-            #binding-cells = <2>;
-            tapping_term_ms = <U_TAPPING_TERM>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        u_lt: u_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "u_lt";
-            #binding-cells = <2>;
-            tapping_term_ms = <U_TAPPING_TERM>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-        Shift_Enter: Shift_Enter {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_ENTER";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <40>;
-            tapping-term-ms = <100>;
-        };
-
-        httl: ht_two_layers {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&to>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
-
-        tdtb: td_mouse_scroll {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&httl 7 4>, <&to 0>;
-
-            tapping-term-ms = <200>;
-        };
-
-        tdtb2: td_slow_scroll {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&httl 7 0>, <&to 6>;
-        };
     };
 
     keymap {
@@ -318,9 +158,9 @@
 
         default_layer {
             bindings = <
-&mt LGUI RBKT    &kp Q  &kp W  &kp E        &kp R            &kp T          &kp Y      &kp U           &kp I      &kp O    &kp P     &lt 8 LBKT
-&mt LCTRL GRAVE  &kp A  &kp S  &kp D        &kp F            &kp G          &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LALT MINUS   &kp Z  &kp X  &kp C        &kp V            &kp B          &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+&kp TAB          &kp Q  &kp W  &kp E        &kp R            &kp T          &kp Y      &kp U           &kp I      &kp O    &kp P     &kp RET
+&kp ESC          &kp A  &kp S  &kp D        &kp F            &kp G          &kp H      &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LC(BSPC)     &kp Z  &kp X  &kp C        &kp V            &kp B          &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp LA(TAB)
                                &lt RSE TAB  &mt LSHFT SPACE  &lt LWR RET    &lt 9 ESC  &mt RSHFT BSPC  &lt 2 DEL
             >;
         };
@@ -352,58 +192,7 @@
             >;
         };
 
-        AUTO-MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &mkp MCLK    &trans  &trans  &trans  &trans  &trans  &trans
-                        &tdtb2  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans
-            >;
-        };
 
-        GAME {
-            bindings = <
-&kp N1  &kp TAB    &kp Q  &kp W   &kp E      &kp R           &none  &none  &none  &none  &none  &to 0
-&kp N2  &kp LCTRL  &kp A  &kp S   &kp D      &kp F           &none  &none  &none  &none  &none  &none
-&kp N3  &kp LSHFT  &kp Z  &kp X   &kp C      &kp V           &none  &none  &none  &none  &none  &none
-                          &trans  &kp SPACE  &kp LEFT_ALT    &none  &none  &none
-            >;
-        };
 
-        SLOW {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &mkp MCLK    &trans  &trans  &trans  &trans  &trans  &trans
-                        &tdtb2  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans
-            >;
-        };
-
-        SCROLL {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &mkp MCLK    &trans  &trans  &trans  &trans  &trans  &trans
-                        &tdtb2  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans
-            >;
-        };
-
-        FBUTTONS_LAYER {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &trans  &trans           &trans     &trans    &trans    &trans
-&trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans           &trans     &trans    &trans    &trans
-                        &trans   &trans   &trans     &trans  &trans           &trans
-            >;
-        };
-
-        IDEA {
-            bindings = <
-&trans  &trans                   &trans                &trans                 &trans            &trans             &trans         &trans    &trans       &open_find_files  &trans  &kp F17
-&trans  &intellij_open_terminal  &rectangle_left_half  &rectangle_right_half  &intellij_rename  &intellij_debug    &intellij_run  &go_back  &go_forward  &trans            &trans  &kp F18
-&trans  &trans                   &trans                &trans                 &trans            &switch_windows    &kp F16        &kp F23   &trans       &trans            &trans  &trans
-                                                       &trans                 &trans            &trans             &trans         &trans    &trans
-            >;
-        };
     };
 };
