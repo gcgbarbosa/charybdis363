@@ -85,10 +85,10 @@
 
         navigation {
             bindings = <
-&kp LC(LEFT)  &trans     &trans           &trans        &mkp MCLK       &trans          &trans          &trans         &trans         &trans      &trans  &kp LC(RIGHT)
-&kp CAPS      &trans     &trans           &trans        &mkp LCLK       &mkp RCLK       &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT   &trans  &trans
-&trans        &kp PSCRN  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP    &kp END     &trans  &trans
-                                          &trans        &trans          &trans          &trans          &trans         &trans
+&kp LC(LEFT)  &trans          &mmv MOVE_UP     &trans           &mkp MCLK       &trans          &trans          &trans         &trans         &trans      &trans  &kp LC(RIGHT)
+&kp CAPS      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp LCLK       &mkp RCLK       &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT   &trans  &trans
+&trans        &kp PSCRN       &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN  &msc SCRL_RIGHT &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP    &kp END     &trans  &trans
+                                               &trans           &trans          &trans          &trans          &trans         &trans
             >;
         };
 
