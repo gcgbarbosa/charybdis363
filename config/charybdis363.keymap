@@ -12,8 +12,6 @@
 };
 
 / {
-
-
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -23,9 +21,9 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
             // TRIGGER: Right Hand Keys (Indices 6-11, 18-23, 30-35) + Right Thumbs (39-41)
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
         };
 
         hmr: home_row_mod_right {
@@ -36,22 +34,9 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
             // TRIGGER: Left Hand Keys (Indices 0-5, 12-17, 24-29) + Left Thumbs (36-38)
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-        };
-
-
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            hold-trigger-on-release;
         };
     };
 
