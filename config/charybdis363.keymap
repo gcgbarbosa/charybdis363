@@ -84,9 +84,9 @@
 
         navigation {
             bindings = <
-&kp LA(LEFT)  &trans          &mmv MOVE_UP     &trans           &mkp MCLK       &kp LG(DOT)     &trans          &trans         &trans         &trans      &trans  &kp LA(RIGHT)
-&kp CAPS      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp LCLK       &mkp RCLK       &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT   &trans  &trans
-&trans        &kp PSCRN       &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN  &msc SCRL_RIGHT &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP    &kp END     &trans  &trans
+&trans        &trans          &mmv MOVE_UP     &trans           &mkp MCLK       &kp LG(DOT)     &kp LG(LEFT)    &kp LG(DOWN)   &kp LG(UP)     &kp LG(RIGHT)  &trans  &trans
+&kp CAPS      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp LCLK       &mkp RCLK       &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT      &trans  &trans
+&trans        &kp PSCRN       &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN  &msc SCRL_RIGHT &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &trans  &trans
                                                &trans           &trans          &trans          &trans          &trans         &trans
             >;
         };
@@ -102,10 +102,10 @@
 
         numbers {
             bindings = <
-&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &trans
-&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans   &kp LG(LC(SPC))  &trans        &trans    &trans   &trans   &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &trans
-                                    &trans        &trans          &trans   &trans           &trans        &trans
+&kp LA(LEFT)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &kp LA(RIGHT)
+&trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans   &kp LG(LC(SPC))  &trans        &trans    &trans   &trans   &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &trans
+                                          &trans        &trans          &trans   &trans           &trans        &trans
             >;
         };
 
